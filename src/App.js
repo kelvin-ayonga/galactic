@@ -4,14 +4,16 @@ import './App.css';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.image = new Image();
-    this.image.src =  "/assets/images/ship.png";
+    
+    let image = new Image();
+    image.src =  "/assets/images/ship.png";
     const width = 100;
     const height = 110;
 
     this.state = {
       height: window.innerHeight,
       width: window.innerWidth,
+      image : image,
       map : {
         37 : false,
         38 : false,
@@ -88,7 +90,7 @@ class App extends Component {
 
   drawPlayer=()=>{
     this.state.context.drawImage( 
-      this.image,
+      this.state.image,
       this.state.player.x, 
       this.state.player.y,
       this.state.player.width,
