@@ -5,7 +5,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.image = new Image();
-    this.image.src =  "/ship.png";
+    this.image.src =  "/assets/images/ship.png";
     const width = 100;
     const height = 110;
 
